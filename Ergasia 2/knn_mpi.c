@@ -397,10 +397,6 @@ void nonBlockingTask(){
 		}
 	}
 
-	//Set a barrier for all tasks to get synchronised before they start determing
-	//points' labels
-	MPI_Barrier(MPI_COMM_WORLD);
-
 	for(int t = 0; t < NumTasks - 1; t++){
 		int r = 0;
 		//Wait until a block of labels arrives
